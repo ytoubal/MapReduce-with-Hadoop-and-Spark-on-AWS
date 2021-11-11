@@ -69,10 +69,6 @@ public class PeopleYouMayKnow {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(FriendRelation.class);
 
-
-		//FileInputFormat.addInputPath(job, new Path("/home/yanis/Desktop/PeopleYouMayKnow/soc-LiveJournal1Adj-Test.txt"));
-		//String outputPath = "/home/yanis/Desktop/test/" + "10";
-		//FileOutputFormat.setOutputPath(job, new Path(outputPath));
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 

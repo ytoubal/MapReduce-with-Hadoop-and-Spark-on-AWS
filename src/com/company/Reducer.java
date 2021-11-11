@@ -17,13 +17,13 @@ public class Reducer extends org.apache.hadoop.mapreduce.Reducer<Text,FriendRela
         for (FriendRelation val : values) {
 
             if (val.relationship.get() == -1) { // already friends
-                currentFriends.add(val.friend.toString());
+                currentFriends.add(val.user.toString());
 
-            } else if (!currentFriends.contains(val.friend.toString())){ //potential friend
+            } else if (!currentFriends.contains(val.user.toString())){ //potential friend
 
-                MutableInt numMutualFriends = friendsRecommendation.get(val.friend.toString());
+                MutableInt numMutualFriends = friendsRecommendation.get(val.user.toString());
                 if (numMutualFriends == null) { // not in map already
-                    friendsRecommendation.put(val.friend.toString(), new MutableInt(1));
+                    friendsRecommendation.put(val.user.toString(), new MutableInt(1));
                 } else { // already in map
                     numMutualFriends.increment();
                 }
