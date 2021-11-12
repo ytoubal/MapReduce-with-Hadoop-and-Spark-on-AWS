@@ -4,7 +4,7 @@
 
 => Second step is to create a directory (/home/ubuntu/SparkDir/sparkwordcount/com/tp2/wordcount) where SparkWordCount.scala program will be
 
-=> Then copy paste the pom.xml file in ~/sparkwordcount and generate the application jar by running "mvn package" command from that same directory. Note this will generate sparkwordcount-0.0.1-SNAPSHOT.jar in /target directory (~/sparkwordcount/target)
+=> Then copy paste the pom.xml file in  ~/sparkwordcount and generate the application jar by running "mvn package" command from that same directory. Note this will generate sparkwordcount-0.0.1-SNAPSHOT.jar in /target directory (~/sparkwordcount/target)
 
 => Launch the SparkWordCount.scala script from its directory (~/tp2/wordcount) by typing the following command:
       time spark-submit --class SparkWordCount $YOUR_LINK/target/sparkwordcount-0.0.1-SNAPSHOT.jar $YOUR_LINK/YOURFILE.txt
